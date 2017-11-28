@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+		const {ipcRenderer} = require('electron')
+		var loginWithFB = function () {
+		ipcRenderer.send("fb-authenticate", "yes");
+		};
+	</script>
+	<button id="fb-button" onclick="loginWithFB();">Sign in with Facebook</button><br><br>
+	<table>
+	<tr>
+		<td rowspan="2" style='width:128px;height:128px;'><img id="fb-pp" alt="></img></td>
+		<td id="fb-name"></td>
+	</tr>
+	<tr>
+		<td id="fb-id"></td>
+	</tr>
+	</table>
+  </body>
+</html>
