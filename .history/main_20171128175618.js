@@ -62,8 +62,8 @@ const ipcMain = electron.ipcMain;
 var FB = require('fb');
 ipcMain.on("fb-authenticate",function (event, arg) {
     var options = {
-      client_id: '<app id of the client>',
-      scopes: 'public_profile',
+      client_id: '<>',
+      scopes: "public_profile",
       redirect_uri: "https://www.facebook.com/connect/login_success.html"
     };
     var authWindow = new BrowserWindow({ width: 450, height: 300, show: false,
